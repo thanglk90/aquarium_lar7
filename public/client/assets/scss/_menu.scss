@@ -1,0 +1,78 @@
+.menu {
+    
+    background-color: #F4F4F4;   
+
+    &-pc {
+
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            display: block;
+        }
+    }
+
+    &-mobile {
+        display: none;   
+        color: #FFF;
+
+        @media screen and (max-width: 768px) {
+            display: block;
+        }
+
+        &__top {
+            background: #1c88f5;
+
+            &-icon {
+                font-size: 24px;
+                color: #fff;
+
+                &-cart {
+                    
+                    padding: 8px 10px;
+                    border-radius: 50%;
+                    background-color: #ff9a00;
+
+                }
+            }
+        }
+
+        &__bottom {
+            background: #555;
+        }
+    }
+
+    &-list {
+        list-style-type: none;
+
+        &-item {
+            display: inline-block;
+            padding: 10px 25px;
+
+            a {
+                text-decoration: none;
+                font-size: 17px;
+                color: #000;
+                font-weight: bold;
+                transition: all 0.3s;
+
+                &:hover {
+                    color: red;
+                }
+            }
+
+            @media screen and (max-width: 768px) {            
+                display: block;
+                
+                a {
+                    color: #fff;
+                }
+            }
+        }
+
+        
+    }
+
+    
+    
+}
+

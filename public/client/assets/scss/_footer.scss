@@ -1,0 +1,145 @@
+.footer {
+    padding: 20px;
+    // height: 500px;
+    color: #fff;
+    background-image: url('/assets/images/footer.jpg');
+    background-repeat: repeat-y;
+    background-size: cover;
+
+    .container {
+        border: 1px solid rgba(240, 232, 232, 0.3);
+        border-radius: 5px;
+    }
+
+    &-license {
+        font-size: 15px;
+        margin-bottom: 20px;
+        padding-left: 20px;
+
+        &-author {
+            color: #00c0ff;
+        }
+    }
+
+    &-box {
+        
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width: 768px) {
+            display: block;
+        }
+
+    }
+
+    &-box__item {
+
+        width: 20%;
+        max-width: 20%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            max-width: 100%;
+        }
+        
+
+        &-title {
+            text-transform: uppercase;
+            padding-bottom: 5px;
+            position: relative;
+            color: gray;
+
+            &::after {
+                content: '';
+                width: 70%;
+                height: 1px;
+                background-color: #fff;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+            
+        }
+
+        &-content {
+            font-size: 16px;
+            margin-top: 15px;
+            font-size: 14px;
+
+            .dotted {
+                border-bottom-style: dashed;
+                border-width: 1px;
+                margin: 5px 0;
+            }
+
+            &-table {
+                display: flex;
+
+                &-item {
+                    &:nth-child(2) {
+                        margin-left: auto;
+                    }
+                }
+            }
+            
+            &-support {
+                text-decoration: none;
+                color: #fff;
+                transition: all .3s;
+                &:hover {
+                    color: yellow;
+                }
+            }
+
+            .thongke {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            
+            &-hotlink {
+                border-radius: 5px;
+                background-color: #fff;
+                padding: 14px 10px;
+
+                &-box {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+    
+
+                &-icon {
+                    background-image: url('/assets/images/contact.png');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    min-width: 46px;
+                    height: 46px;
+                }
+
+                &-text {
+                    margin-left: 10px;
+                    color: gray;
+                    font-size: 14px;
+
+                    &-zalo  {
+                        font-size: 20px;
+                        color: red;
+                        font-weight: 500;
+                    }
+                }
+
+                &-phone {
+                    font-size: 20px;
+                    color: red;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    
+}

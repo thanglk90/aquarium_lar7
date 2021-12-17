@@ -1,0 +1,17 @@
+.product {
+
+    &__img {
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__price {
+        span {
+            font-size: 20px;
+        }
+    }
+
+}

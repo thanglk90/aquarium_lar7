@@ -1,0 +1,55 @@
+.banner {
+
+    &-top {
+        background-color: #da2625;
+        padding: 5px 0;
+        color: #fff;
+    }
+
+    &-bottom {
+        // height: 150px;
+
+        &__box {
+
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            position: relative;
+
+            &-img {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            &-search {
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+
+                &-input {
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                    width: 220px;
+
+                    &:focus {
+                        outline: 1px solid #f97d17 !important;
+                        border-color: transparent;
+                    }
+                }
+
+                &-submit {
+                    background-color: #da2625 !important;
+                    border: none;
+                    border-radius: 5px;
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                    color: #fff;
+                }
+
+                @media screen and (max-width: 768px) {
+                    display: none !important;
+                }
+            }
+        }
+    }
+}

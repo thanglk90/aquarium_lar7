@@ -1,0 +1,67 @@
+// sass assets/scss/style.scss assets/css/style.css --watch
+
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+}
+
+#scroll-top {
+    position: fixed;
+    right: 40px;
+    bottom: 400px;
+    padding: 12px 16px;
+    border: 3px solid black;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 999;
+
+    i {
+        font-size: 28px;
+        color: black;
+
+        @media screen and (max-width: 768px) {
+            font-size: 16px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        right: 10px;
+        bottom: 50px;
+    }
+}
+
+.color-red {
+    color: red !important;
+}
+
+.color-blue {
+    color: blue !important;
+}
+
+@import 'variables';
+@import 'banner';
+@import 'menu';
+@import 'filter';
+@import 'footer';
+@import 'site-breadcumb';
+@import 'box-search';
+@import 'banggia';
+@import 'product';
+@import 'custom';
+
+
+

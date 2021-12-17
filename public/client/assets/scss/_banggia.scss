@@ -1,0 +1,111 @@
+.banggia {
+
+    margin-top: 15px;    
+
+    &--header {
+
+        font-size: 24px;
+        font-weight: bold;
+        
+
+        
+        
+        .banggia__list {
+            display: flex;
+            background-color: #92cddc;
+            border-top: 1px solid black;
+            border-left: 1px solid black;
+
+            @media screen and (max-width: 768px) {
+                font-size: 20px;
+
+            }
+            &-item {
+                text-align: center;
+                color: red;
+                border-right: 1px solid black;
+                border-bottom: 1px solid black;
+                padding-top: 5px;
+                padding-bottom: 5px;
+    
+                &-name {
+                    flex-basis: 58%;
+                }
+                &-price {
+                    flex-basis: 12%;
+                }
+                &-guarantee {
+                    flex-basis: 10%;
+                }
+                &-store {
+                    flex-basis: 10%;
+                }
+                &-detail {
+                    flex-basis: 10%;
+                }
+            }
+        }
+    }
+
+    &-wrapper {
+        border: 1px solid blue;
+        margin-bottom: 15px;
+    }
+
+    &__title {
+        padding: 12px 10px;
+        width: 100%;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        background: #00CCFF;
+        color: #FF0000;
+    }
+
+    &__list {
+        display: flex;
+        // background-color: #92cddc;
+
+        &-item {
+            text-align: center;
+            border-right: 1px solid blue;
+            padding: 10px;
+
+            color: blue;
+            font-size: 18px;
+
+            @media screen and (max-width: 768px) {
+                font-size: 15px;
+            }
+
+            &-name {
+                flex-basis: 58%;
+                text-align: start;
+                
+            }
+            &-price {
+                flex-basis: 12%;
+                color: red;
+            }
+            &-guarantee {
+                flex-basis: 10%;
+            }
+            &-store {
+                flex-basis: 10%;
+            }
+            &-detail {
+                flex-basis: 10%;
+                
+                &-view {
+                    background-color: blue;
+                    a {
+                        color: #fff;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,73 @@
+.owl-nav {
+    width: 100%;
+    background-color: red;
+    position: absolute;
+    top: 22%;
+
+    .owl-prev {
+        position: absolute;
+        left: 0;
+
+        width: 40px;
+        height: 60px;
+ 
+        span {       
+            display: flex !important;
+            justify-content: center;
+            align-items: center; 
+            margin-top: -7px;
+            font-size: 32px;
+        }
+    }
+
+    .owl-next {
+        position: absolute;
+        right: 0;
+
+        width: 40px;
+        height: 60px;
+
+        span {
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            margin-top: -7px;
+            font-size: 32px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        top: 15%;
+        .owl-prev {
+            position: absolute;
+            left: 0;
+    
+            width: 30px;
+            height: 40px;
+     
+            span {       
+                display: flex !important;
+                justify-content: center;
+                align-items: center; 
+                margin-top: -7px;
+                font-size: 32px;
+            }
+        }
+    
+        .owl-next {
+            position: absolute;
+            right: 0;
+    
+            width: 30px;
+            height: 40px;
+    
+            span {
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                margin-top: -7px;
+                font-size: 32px;
+            }
+        }
+    }
+}

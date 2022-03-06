@@ -116,7 +116,9 @@ class ProductModel extends AdminModel
 
         if($option['task'] == 'client-get-list-for-homepage'){
             
-            $products = self::where('category_id', $params['cate_sub_id'])->select('name', 'slug', 'id', 'thumb', 'price', 'sale_price')->take($params['pagination']['itemPerPage'])->get();
+            $products = self::where('category_id', $params['cate_sub_id'])
+                            ->orderByDesc('store')
+                            ->select('name', 'slug', 'id', 'thumb', 'price', 'sale_price', 'store')->take($params['pagination']['itemPerPage'])->get();
 
             return $products;
         }

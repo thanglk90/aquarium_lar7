@@ -5,33 +5,15 @@ use App\Http\Helper\Meta;
 @endphp
 
 @section('canonical', route('detail', ['slug' => $item->slug]))
-@section('title', Meta::showTitle($item->name, $options))
-@section('og-title', Meta::showTitle($item->name, $options))
 @section('og-type', 'article')
 @section('og-url', route('detail', ['slug' => $item->slug]))
 @section('article-modified_time', $item->updated_at)
 @section('og-image', route('client-home') . '/storage/photos/shares/products/' . $item->thumb)
 
-@if (count($options) > 0 && $options['seo_all_page'] == 'no')
-
-    @section('desc', Meta::showDesc($item->seo_desc, $options, ['product' => $item->name]))
-    @section('og-desc', Meta::showDesc($item->seo_desc, $options, ['product' => $item->name]))
-
-@endif
-
-@if (count($options) > 0 && $options['seo_all_page'] == 'yes')
-    @section('title', Meta::showTitle($options['meta_title_homepage'], $options))
-    @section('og-title', Meta::showTitle($options['meta_title_homepage'], $options))
-    @section('desc', Meta::showDesc($options['meta_desc_home_page'], $options))
-    @section('og-desc', Meta::showDesc($options['meta_desc_home_page'], $options))
-@endif
-
-@if (count($options) > 0 && $options['seo_all_page'] == 'no')
-    @section('title', Meta::showTitle($options['custom_meta_title_detail'], $options))
-    @section('og-title', Meta::showTitle($options['custom_meta_title_detail'], $options))
-    @section('desc', Meta::showDesc($item->seo_desc, $options, ['product' => $item->name]))
-    @section('og-desc', Meta::showDesc($item->seo_desc, $options, ['product' => $item->name]))
-@endif
+@section('title', Meta::showTitle($options['meta_title_detail'], $options, ['product' => $item->name])))
+@section('og-title', Meta::showTitle($options['meta_title_detail'], $options, ['product' => $item->name])))
+@section('desc', Meta::showDesc($item->seo_desc ?? $options['meta_desc_detail'], $options, ['product' => $item->name]))
+@section('og-desc', Meta::showDesc($item->seo_desc ?? $options['meta_desc_detail'], $options, ['product' => $item->name]))
 
 @section('breadcrumb')
     @php

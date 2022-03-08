@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Artisan;
 
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
@@ -66,7 +68,9 @@ Auth::routes();
 
 Route::get('/linkstorage', function () {
     Artisan::call('storage:link');
+    return "call ok";
 });
+
 
 
 

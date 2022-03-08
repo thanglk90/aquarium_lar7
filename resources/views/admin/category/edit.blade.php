@@ -44,6 +44,16 @@
                         <span style="color:red;">{{ $errors->first('parent_id') }}</span>
                     @endif
                 </div>
+
+                <div class="mb-3">
+                    <label class="form-label"><h5>Mô tả của thẻ Meta SEO - 300 kí tự (chèn tên danh mục bằng ':category', tên trang bằng ':site_name')</h5></label>
+                    <textarea name="seo_desc" class="form-control">{{ $item->seo_desc }}</textarea>
+
+                    @if ($errors->has('seo_desc'))
+                        <span style="color:red;">{{ $errors->first('seo_desc') }}</span>
+                    @endif
+                </div>
+
                 <div class="mb-3">
                     <label class="form-label"><h4>Trạng thái danh mục {{ $item->status }}</h4></label>
                     <div class="form-check">

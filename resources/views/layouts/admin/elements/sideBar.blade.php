@@ -11,6 +11,14 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                     Sản phẩm
                 </a>
+                <a class="nav-link" href="{{ route('option.index') }}">
+                    <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                    Cài đặt thẻ Meta
+                </a>
+                <a class="nav-link" href="{{ route('banner.index') }}">
+                    <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                    Cài đặt ảnh banner
+                </a>
                 
             </div>
         </div>

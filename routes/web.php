@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\OptionController;
+use App\Http\Controllers\Admin\BannerController;
 
 use App\Http\Controllers\Client\IndexController;
 use App\Http\Controllers\Client\QuoteController;
@@ -39,6 +41,8 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
     Route::resources([
         'category' => CategoryController::class,
         'product' => ProductController::class,
+        'option' => OptionController::class,
+        'banner' => BannerController::class,
     ]);
     
     Route::get('/show-products', [CategoryController::class, 'showProducts'])->name('show-products');

@@ -33,6 +33,7 @@ class CategoryRequest extends FormRequest
             'name'      => "required|unique:$this->table,name,$id",
             'slug'      => "required|unique:$this->table,slug,$id",
             'parent_id' => "required|numeric",
+            'seo_desc'  => "",
             'status'    => "required|in:active,inactive",
         ];
     }

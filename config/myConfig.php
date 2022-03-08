@@ -13,6 +13,10 @@ return [
             'inactive' => ['name' => 'Ẩn'],
             'default' => ['name' => 'Chưa xác định']
         ]
+        ],
+
+    'options' => [
+        'site_name' => 'Cá Cảnh Giá Rẻ'
     ]
     
 ];

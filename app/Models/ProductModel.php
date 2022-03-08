@@ -18,6 +18,7 @@ class ProductModel extends AdminModel
         'name', 
         'slug', 
         'sku',
+        'seo_desc',
         'introduce',
         'description',
         'category_id',

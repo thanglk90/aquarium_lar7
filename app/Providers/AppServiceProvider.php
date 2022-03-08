@@ -7,6 +7,7 @@ use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\View;
 
 use App\Models\CategoryModel;
+use App\Http\Helper\Option;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -31,7 +32,8 @@ class AppServiceProvider extends ServiceProvider
 
         $cate_parents = CategoryModel::where('status', 'active')->where('parent_id', 0)->get();
         View::share([
-            'cate_parents' => $cate_parents
+            'cate_parents' => $cate_parents,
+            'options' => Option::getOption()
         ]);
     }
 }

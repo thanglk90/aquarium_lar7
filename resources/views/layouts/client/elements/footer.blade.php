@@ -31,7 +31,7 @@
                     <div>- Giao hàng tại chành xe,</div>
                     <div>- Ship COD</div>
                     <div>Miễn Phí Vận Chuyến cho đơn hàng có khoảng cách giao hàng < 5Km</div>
-                    <div>Liên Hệ: <a href="tel:0974180759">0974 180 759</a></div>
+                    <div>Liên Hệ: <a href="tel:{{ $options['contact_phone'] }}">{{ $options['contact_phone'] }}</a></div>
                 </div>
             </div>
             <div class="footer-box__item">
@@ -78,8 +78,8 @@
                             <span class="footer-box__item-content-hotlink-text-zalo">Hotlink & Zalo</span>
                         </div>
                     </div>
-                    <div class="footer-box__item-content-hotlink-phone">0974.180.759</div>
-                    <div class="footer-box__item-content-hotlink-phone">cacanhgiare.vn@gmail</div>
+                    <div class="footer-box__item-content-hotlink-phone">{{ $options['contact_phone'] }}</div>
+                    <div class="footer-box__item-content-hotlink-phone">{{ $options['contact_email'] }}</div>
                 </div>
             </div>
         </div>

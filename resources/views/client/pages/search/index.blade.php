@@ -1,6 +1,19 @@
 @extends('layouts.client.index')
 
-@section('title', 'Tìm kiếm')
+@php
+use App\Http\Helper\Meta;
+@endphp
+
+@section('canonical', route('search', ['search' => Str::slug($search, '-')]))
+@section('og-type', 'website')
+@section('og-url', route('search', ['search' => Str::slug($search, '-')]))
+@section('article-modified_time', now())
+@section('og-image', asset('client/assets/images/favicon.jpg'))
+
+@section('title', Meta::showTitle($options['meta_title_search_by_item_name'], $options, ['search' => $search]))
+@section('og-title', Meta::showTitle($options['meta_title_search_by_item_name'], $options, ['search' => $search]))
+@section('desc', Meta::showDesc($options['meta_desc_search_by_item_name'], $options, ['search' => $search]))
+@section('og-desc', Meta::showDesc($options['meta_desc_search_by_item_name'], $options, ['search' => $search]))
 
 @section('breadcrumb')
     @php

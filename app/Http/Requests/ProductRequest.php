@@ -32,9 +32,10 @@ class ProductRequest extends FormRequest
         return [
             'name'          => "bail|required|unique:$this->table,name,$id",
             'slug'          => "bail|required|unique:$this->table,slug,$id",
-            'sku'          => "bail|required|unique:$this->table,sku,$id",
+            'sku'           => "bail|required|unique:$this->table,sku,$id",
             'introduce'     => "",
             'description'   => "",
+            'seo_desc'      => "",
             'category_id'   => "required|numeric",
             'price'         => "required|numeric|min:1",
             'sale_price'    => "required|numeric|min:0",

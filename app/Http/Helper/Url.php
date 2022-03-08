@@ -12,4 +12,11 @@ class Url {
         // $thumb = route('client-home') . '/storage/photos/shares/products/' . $thumb; -> if public to host
         return $thumb;
     }
+
+    public static function bannerThumb($thumb){
+
+        $thumb = route('client-home') . '/storage/photos/shares/banners/' . $thumb; // chạy trên local do đã trỏ sẵn vào folder public nên ko cần /storage/public/photos
+
+        return $thumb;
+    }
 }

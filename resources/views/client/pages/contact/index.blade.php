@@ -1,16 +1,29 @@
 @extends('layouts.client.index')
 
-@section('title', 'LIÊN HỆ')
+@php
+use App\Http\Helper\Meta;
+@endphp
+
+@section('canonical', route('contact'))
+@section('og-type', 'website')
+@section('og-url', route('contact'))
+@section('article-modified_time', now())
+@section('og-image', asset('client/assets/images/favicon.jpg'))
+
+@section('title', Meta::showTitle($options['meta_title_contact'], $options))
+@section('og-title', Meta::showTitle($options['meta_title_contact'], $options))
+@section('desc', Meta::showDesc($options['meta_desc_contact'], $options))
+@section('og-desc', Meta::showDesc($options['meta_desc_contact'], $options))
 
 @section('main')
   
     <div class="container">
         <div class="fs-1 color-blue">Liên hệ</div>
-        <div class="fs-3 fw-bold color-red">Cá cảnh giá rẻ</div>
-        <div class="fs-6 fw-bold fst-italic color-blue">Địa chỉ: 80/25/21/11 Ngô Gia Tự, phường An Bình, thành phố Dĩ An, tỉnh Bình Dương</div>
+        <div class="fs-3 fw-bold color-red">{{ $options['site_name'] }}</div>
+        <div class="fs-6 fw-bold fst-italic color-blue">Địa chỉ: {{ $options['contact_address'] }}</div>
         <br>
-        <div class="fs-5 fw-bold fst-italic color-red">Điện thoại 0974.180.759</div>
-        <div class="fs-6 fw-bold fst-italic color-blue">cacanhgiare.vn@gmail</div>
+        <div class="fs-5 fw-bold fst-italic color-red">Điện thoại {{ $options['contact_phone'] }}</div>
+        <div class="fs-6 fw-bold fst-italic color-blue">{{ $options['contact_email'] }}</div>
     </div>
 
     <div class="container mt-5">

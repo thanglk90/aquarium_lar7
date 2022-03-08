@@ -1,12 +1,17 @@
+@php
+    use App\Http\Helper\Url;
+    use App\Models\BannerModel;
+@endphp
+
 <div class="banner">
     <section class="banner-top">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-auto">
-                    <span style="color: #fff;"><i class="fas fa-map-marker-alt"></i> 80/25/21/11 Ngô Gia Tự, phường An Bình, thành phố Dĩ An, tỉnh Bình Dương</span>
+                    <span style="color: #fff;"><i class="fas fa-map-marker-alt"></i> {{ $options['contact_address'] }}</span>
                 </div>
                 <div class="col-md-auto">
-                    Tư vấn: <span style="color: #FF0;">0974.180.759</span>
+                    Tư vấn: <span style="color: #FF0;">{{ $options['contact_phone'] }}</span>
                 </div>
                 <div class="col-md-auto ms-auto d-none d-md-block">
                     <a href="https://www.facebook.com/CaCanhGiaRe.vn" target="_blank">
@@ -17,11 +22,11 @@
         </div>
     </section>
 
-    <section class="banner-bottom">
-        <div class="container">
-            <div class="banner-bottom__box">
-                <a href="#">
-                    <img src="{{ asset('client/assets/images/banner-bottom.png') }}" alt="" class="banner-bottom__box-img">
+    <section class="banner-bottom" style="height: 166px;">
+        <div class="container" style="height: 100%;">
+            <div class="banner-bottom__box" style="height: 100%;">
+                <a href="#" style="height: 100%;">
+                    <img src="{{ Url::bannerThumb(BannerModel::where('name', 'top-banner')->first()->thumb) }}" alt="" class="banner-bottom__box-img">
                 </a>
                 <form class="d-flex banner-bottom__box-search">
                     @csrf

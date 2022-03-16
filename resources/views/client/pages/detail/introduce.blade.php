@@ -1,8 +1,5 @@
 @php
     use App\Http\Helper\Url;
-    // echo '<pre>';
-    // print_r($item);
-    // echo '</pre>';die();
 
     $name        = $item->name;
     $price       = $item->sale_price > 0 ? $item->sale_price : $item->price;
@@ -25,7 +22,7 @@
             </div>
             <div class="col-md-6">
                 <div class="product-detail__box">
-                    <h3 class="product-detail__name color-red fw-bold">{{ $name }}</h3>
+                    <h1 class="product-detail__name color-red fw-bold">{{ $name }}</h1>
                     <div class="product-field">
                         <div class="product-detail__price"><strong>Giá sỉ: </strong> <span class="color-red fw-bold">{{ $price }}</span></div>
                         <div class="product-detail__note color-red">

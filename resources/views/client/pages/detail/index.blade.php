@@ -10,8 +10,8 @@ use App\Http\Helper\Meta;
 @section('article-modified_time', $item->updated_at)
 @section('og-image', route('client-home') . '/storage/photos/shares/products/' . $item->thumb)
 
-@section('title', Meta::showTitle($options['meta_title_detail'], $options, ['product' => $item->name])))
-@section('og-title', Meta::showTitle($options['meta_title_detail'], $options, ['product' => $item->name])))
+@section('title', Meta::showTitle($options['meta_title_detail'], $options, ['product' => $item->name]))
+@section('og-title', Meta::showTitle($options['meta_title_detail'], $options, ['product' => $item->name]))
 @section('desc', Meta::showDesc($item->seo_desc ?? $options['meta_desc_detail'], $options, ['product' => $item->name]))
 @section('og-desc', Meta::showDesc($item->seo_desc ?? $options['meta_desc_detail'], $options, ['product' => $item->name]))
 

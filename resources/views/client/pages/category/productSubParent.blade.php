@@ -64,7 +64,7 @@ use App\Http\Helper\Meta;
                     $name   = $item->name;
                     $price  = $item->sale_price > 0 ? $item->sale_price : $item->price;
                     $price  = number_format($price, 0, '', '.') . ' VNĐ';
-                    $thumb  = Url::linkThumb($item->thumb);
+                    $thumb  = Url::linkThumbSmall($item->thumb);
                     $link   = route('detail', ['slug' => $item->slug]);
                 @endphp
                 

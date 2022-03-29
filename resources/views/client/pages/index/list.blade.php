@@ -44,7 +44,7 @@
                                 $name   = $product['name'];
                                 $price  = $product['sale_price'] > 0 ? $product['sale_price'] : $product['price'];
                                 $price  = number_format($price, 0, '', '.') . ' VNĐ';
-                                $thumb  = Url::linkThumb($product['thumb']);
+                                $thumb  = Url::linkThumbSmall($product['thumb']);
                                 $link   = route('detail', ['slug' => $product['slug']]);
                             @endphp
                             <div class="product-item">

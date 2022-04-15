@@ -76,14 +76,14 @@
                         @endif
                     </div>
 
-                    {{-- <div class="mb-3">
+                    <div class="mb-3">
                         <label class="form-label"><h5>Mô tả sản phẩm</h5></label>
                         <textarea name="description" class="form-control" id="description_editor" placeholder="Mô tả sản phẩm">{{ $item->description }}</textarea>
 
                         @if ($errors->has('description'))
                             <span style="color:red;">{{ $errors->first('description') }}</span>
                         @endif
-                    </div> --}}
+                    </div>
                     
                     <div class="mb-3">
                         <label class="form-label"><h5>Trạng thái sản phẩm</h5></label>
